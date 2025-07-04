@@ -1,3 +1,44 @@
+/* Style for the navbar */
+nav {
+  background-color: #333; /* Dark background */
+  padding: 10px 20px; /* Space inside navbar */
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between title and links */
+}
+
+/* Style for the website title */
+.nav-title {
+  color: #fff; /* White text */
+  font-size: 1.2em; /* Slightly larger text */
+  font-weight: bold; /* Bold text */
+}
+
+/* Style for navigation links */
+.nav-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  margin-left: 20px; /* Space from the title */
+  font-size: 1em;
+}
+
+/* Add a hover effect to the link */
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Make navbar responsive on small screens */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+  .nav-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
 h1{
   color: red;
 }
