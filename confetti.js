@@ -15,7 +15,7 @@ function launchConfetti() {
 
   // Function to create a burst of confetti
   function createBurst() {
-    for (let i = 0; i < 40; i++) { // 40 pieces per burst, more bursts overall
+    for (let i = 0; i < 80; i++) { // 80 pieces per burst for more confetti
       const confetti = document.createElement('div');
       confetti.style.position = 'absolute';
       confetti.style.width = '10px';
@@ -38,12 +38,12 @@ function launchConfetti() {
     }
   }
 
-  // Launch bursts every 200ms for 2 seconds
+  // Launch bursts every 200ms for 1.5 seconds
   let bursts = 0;
   const burstInterval = setInterval(() => {
     createBurst();
     bursts++;
-    if (bursts >= 10) { // 10 bursts x 200ms = 2 seconds
+    if (bursts >= 8) { // 8 bursts x 200ms = 1.6s, close to 1.5s
       clearInterval(burstInterval);
     }
   }, 200);
@@ -51,7 +51,7 @@ function launchConfetti() {
   // Remove confetti after animation
   setTimeout(() => {
     confettiContainer.remove();
-  }, 2600); // Wait a bit longer to let all confetti finish
+  }, 1700); // Wait a bit longer to let all confetti finish
 }
 
 // Helper function to get a random bright color
