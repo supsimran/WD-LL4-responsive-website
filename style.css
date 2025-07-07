@@ -103,3 +103,17 @@ body {
   margin-right: 12px; /* Slightly less space between text and blue bar */
   white-space: nowrap; /* Prevent wrapping to a new line */
 }
+
+/* Logo in the top right corner, always visible above header/body text */
+.corner-logo {
+  position: fixed; /* Stay fixed when scrolling */
+  top: 18px; /* Less space from the top for a tighter fit */
+  right: 3vw; /* Move further right for better alignment */
+  height: 60px; /* Match the blue-bar (Donate) height */
+  width: auto; /* Let width scale naturally */
+  z-index: 2000; /* Higher z-index to stay above all content */
+  background: transparent; /* Transparent background */
+  border-radius: 6px; /* Slightly rounded corners */
+  padding: 0; /* No padding for exact alignment */
+  box-shadow: none; /* No shadow for a clean look */
+}
