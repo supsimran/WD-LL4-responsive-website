@@ -1,44 +1,66 @@
-/* Style for the navbar */
-nav {
-  background-color: #333; /* Dark background */
-  padding: 10px 20px; /* Space inside navbar */
-  display: flex; /* Arrange items in a row */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between title and links */
+/* Set the background image for the whole page */
+body {
+  background-image: url("https://d35lvrk9fb4ftj.cloudfront.net/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzLzk1ZWY4NGQxMTgzNTA5NGMxYTUyMGY4OGQzN2M1MGJkYjMwNGI3ZWU3OTdhOGJlNTUzNWUxNjE0Yzg5ZTNiOTAvcHJldmlldy9NYWRhZ2FzY2FyXzIwMTlfQ0ctNDI0Ni5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYwMCwiaGVpZ2h0Ijo2MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ==");
+  background-size: cover; /* Make the image cover the whole background */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image */
+  min-height: 100vh; /* Make sure background covers full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-/* Style for the website title */
-.nav-title {
-  color: #fff; /* White text */
-  font-size: 1.2em; /* Slightly larger text */
-  font-weight: bold; /* Bold text */
+/* Main heading style */
+.main-heading {
+  color: #fff7e1; /* Light cream color */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
+  font-size: 2.7em; /* Increased the heading size further */
+  text-align: right; /* Align text to the right */
+  margin-top: 44vh; /* Move heading further down (was 40vh) */
+  margin-left: 66vw; /* Push heading into the right third of the page */
+  margin-right: 5vw; /* Add a little space from the right edge */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4); /* Add a soft shadow for readability */
+  line-height: 1.5; /* 1.5 spacing for the heading */
 }
 
-/* Style for navigation links */
-.nav-link {
-  color: #fff; /* White text */
-  text-decoration: none; /* Remove underline */
-  margin-left: 20px; /* Space from the title */
-  font-size: 1em;
+/* Body text under the heading */
+.main-body-text {
+  color: #fff7e1; /* Light cream color */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
+  font-size: 1.1em; /* Slightly larger than normal text */
+  text-align: right; /* Align text to the right */
+  margin-left: 66vw; /* Keep in the right third of the page */
+  margin-right: 5vw; /* Space from the right edge */
+  margin-top: 24px; /* Less space below the heading (was 56px) */
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3); /* Soft shadow for readability */
+  line-height: 2; /* Double spacing for the text */
+  letter-spacing: 1px; /* Space out the letters a bit for readability */
 }
 
-/* Add a hover effect to the link */
-.nav-link:hover {
-  text-decoration: underline;
+/* Yellow rectangular bar under the body text */
+.yellow-bar {
+  background: #ffc907; /* Bright yellow color */
+  /* The bar should align with the right edge of the text and heading */
+  height: 80px; /* Increased height for a thicker bar */
+  border-radius: 10px; /* Less rounded corners */
+  margin-left: 66vw; /* Align with text on the right */
+  margin-right: 5vw; /* Same as text */
+  margin-top: 32px; /* Space above the bar */
+  margin-bottom: 0;
+  /* Make the bar stretch to the same right edge as the text */
+  width: calc(100vw - 66vw - 5vw); /* Responsive width to match text area */
+  min-width: 120px; /* Prevent bar from getting too small on small screens */
 }
 
-/* Make navbar responsive on small screens */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-  }
-  .nav-link {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-
-h1{
-  color: red;
+/* Inner dark blue bar inside the yellow bar */
+.blue-bar {
+  background: #003366; /* Dark blue color */
+  height: 60px; /* Slightly smaller than yellow bar for padding */
+  width: 34%; /* Keep the same width */
+  /* Center the blue bar vertically in the yellow bar */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: auto; /* Push the blue bar to the right side */
+  margin-right: 10px; /* Small space from the right edge */
+  border-radius: 8px; /* Slightly rounded corners */
 }
