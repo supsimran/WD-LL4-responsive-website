@@ -60,8 +60,8 @@ body {
   position: static; /* Remove relative positioning */
   top: auto;
   transform: none;
-  margin-left: 12px; /* Space between text and blue bar */
-  margin-right: 0;
+  margin-left: 4px; /* Less space between text and blue bar (was 12px) */
+  margin-right: 24px; /* Add more space on the right to shift left */
   border-radius: 8px; /* Slightly rounded corners */
   display: flex; /* Use flex to center text */
   align-items: center; /* Center text vertically */
@@ -78,7 +78,7 @@ body {
   color: #fff7e1; /* Light cream color */
   font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
   text-decoration: none; /* Remove underline */
-  font-size: inherit; /* Inherit font size from blue-bar */
+  font-size: 0.95em; /* Make Donate even smaller */
   font-weight: bold;
   letter-spacing: 1px;
   display: inline-block;
