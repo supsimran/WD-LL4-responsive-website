@@ -39,16 +39,17 @@ body {
 /* Yellow rectangular bar under the body text */
 .yellow-bar {
   background: #ffc907; /* Bright yellow color */
-  /* The bar should align with the right edge of the text and heading */
   height: 80px; /* Increased height for a thicker bar */
   border-radius: 10px; /* Less rounded corners */
   margin-left: 66vw; /* Align with text on the right */
   margin-right: 5vw; /* Same as text */
   margin-top: 32px; /* Space above the bar */
   margin-bottom: 0;
-  /* Make the bar stretch to the same right edge as the text */
   width: calc(100vw - 66vw - 5vw); /* Responsive width to match text area */
   min-width: 120px; /* Prevent bar from getting too small on small screens */
+  display: flex; /* Arrange text and blue bar side by side */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Center all content horizontally */
 }
 
 /* Inner dark blue bar inside the yellow bar */
@@ -56,11 +57,49 @@ body {
   background: #003366; /* Dark blue color */
   height: 60px; /* Slightly smaller than yellow bar for padding */
   width: 34%; /* Keep the same width */
-  /* Center the blue bar vertically in the yellow bar */
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: auto; /* Push the blue bar to the right side */
-  margin-right: 10px; /* Small space from the right edge */
+  position: static; /* Remove relative positioning */
+  top: auto;
+  transform: none;
+  margin-left: 12px; /* Space between text and blue bar */
+  margin-right: 0;
   border-radius: 8px; /* Slightly rounded corners */
+  display: flex; /* Use flex to center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
+  color: #fff7e1; /* Light cream color for text */
+  font-size: 1.6em; /* Make the text a bit larger */
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Donate link inside the blue bar */
+.donate-link {
+  color: #fff7e1; /* Light cream color */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
+  text-decoration: none; /* Remove underline */
+  font-size: inherit; /* Inherit font size from blue-bar */
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+}
+
+.donate-link:hover, .donate-link:focus {
+  text-decoration: underline; /* Underline on hover/focus for accessibility */
+}
+
+/* Text in the yellow part of the bar next to the blue bar */
+.change-maker-text {
+  color: #1a1a1a; /* Dark text color */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova if available */
+  font-size: 1.1em; /* Make the font smaller to fit in one line */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 18px; /* Slightly less space from the left edge */
+  margin-right: 12px; /* Slightly less space between text and blue bar */
+  white-space: nowrap; /* Prevent wrapping to a new line */
 }
